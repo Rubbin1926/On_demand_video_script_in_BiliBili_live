@@ -94,6 +94,17 @@
     
 如果要打开此功能，就将上述操作反向操作一次即可（即和Github上代码保持一致） / If you want to turn on this feature, simply reverse the above operation once (i.e. keep it consistent with the code on Github)
 
+
+## **注意默认浏览器和代码的匹配**
+打开play_video.py，找到如下代码 / Open play_video.py, find the following code
+
+    def open_and_close_browser(url, t, is_list):
+        # 在当前页面打开新窗口
+        webbrowser.open(url)
+        hwnd = win32gui.FindWindow(None, "Microsoft Edge")      #ATTENTION HERE
+        win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
+作者的默认浏览器是Microsoft Edge，请将"hwnd"变量里的"Microsoft Edge"改为你的默认浏览器在Windows里的名称 / The author's default browser is Microsoft Edge. Please change the "Microsoft Edge" in the "hwnd" variable to the name of your default browser in Windows
+
 ## **作者无聊的bb / The author's boring remarks**
 随缘更新，有一些问题我还是不满意，比如关闭视频是模拟键盘"Alt+F4"来实现。一直开关浏览器会影响性能。
 这个程序是自己在看一位up主的直播间时，突发奇想做来练手的。
