@@ -12,9 +12,6 @@ import os
 """BV1WV4y167Uz"""
 """BV15z4y147hQ"""
 
-room = live.LiveDanmaku(22725544)
-# 咸鱼直播间:9447550
-
 
 def if_switch_video():
     """返回 True 或 False，判断是否切换视频"""
