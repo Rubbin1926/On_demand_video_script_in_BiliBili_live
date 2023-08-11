@@ -43,7 +43,7 @@
 ----------
 
 
-###修改默认列表 / Modify default list
+### 修改默认列表 / Modify default list
 打开default_list.json文件，按照原文件里的格式对视频列表进行修改 / Open default_list.json file, modify the video list according to the format in the original file
 例如修改为 / For example, modify to
 
