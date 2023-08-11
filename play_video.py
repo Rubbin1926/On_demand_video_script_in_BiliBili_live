@@ -15,18 +15,6 @@ import os
 room = live.LiveDanmaku(22725544)
 # 咸鱼直播间:9447550
 
-# def open_and_close_browser(url, t):
-#     # 在当前页面打开新窗口
-#     webbrowser.open(url)
-#     hwnd = win32gui.FindWindow(None, "Microsoft Edge")
-#     win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
-#
-#     # 等待视频播放完成
-#     time.sleep(t)
-#
-#     # 关闭当前页面（通过模拟按下alt+F4快捷键）
-#     pyautogui.hotkey('alt', 'f4')
-
 
 def if_switch_video():
     """返回 True 或 False，判断是否切换视频"""
@@ -160,59 +148,3 @@ async def main():
                 #     json.dump(video_list, f)
 
 asyncio.run(main())
-
-
-# @room.on('DANMU_MSG')
-# async def on_danmaku(event):
-#
-#     # 收到弹幕
-#     danmu = event
-#     #print(danmu)
-#
-#     #弹幕发送人
-#     danmu_person = danmu["data"]["info"][2][1]
-#
-#     #弹幕信息
-#     danmu_info = danmu["data"]["info"][1]
-#
-#     #打印弹幕
-#     print(f"""{danmu_person}:{danmu_info}""")
-#
-#     if danmu_info.startswith("播放 "):
-#         danmu_info_ = danmu_info[3:]
-#         print(danmu_info_)
-#
-#         if danmu_info_.startswith("av"):
-#
-#             # 获取视频信息（时长）
-#             v = danmu_info_[2:]
-#             v = video.Video(aid=int(v))
-#             v_info = await v.get_info()
-#             v_time = v_info["duration"]
-#             print(f"""视频时长：{v_time}""")
-#
-#             # 打开网页播放视频
-#             url = f"""https://www.bilibili.com/video/{danmu_info_}"""
-#             open_and_close_browser(url, v_time+5)
-#             hwnd = win32gui.FindWindow(None, "Microsoft Edge")
-#             win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
-#
-#         if danmu_info_.startswith("BV"):
-#
-#             #获取视频信息（时长）
-#             v = video.Video(bvid = danmu["data"]["info"][1][3:])
-#             v_info = await v.get_info()
-#             v_time = v_info["duration"]
-#             print(f"""视频时长：{v_time}""")
-#
-#             #打开网页播放视频
-#             url = f"""https://www.bilibili.com/video/{danmu["data"]["info"][1][3:]}"""
-#             open_and_close_browser(url, v_time+5)
-#             hwnd = win32gui.FindWindow(None, "Microsoft Edge")
-#             win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
-#
-#         else:
-#             print("视频格式错误，请检查")
-#
-#
-# sync(room.connect())
