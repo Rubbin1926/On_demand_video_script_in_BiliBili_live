@@ -1,6 +1,13 @@
 # BiliBili直播间点播视频脚本 / On_demand_video_script_in_BiliBili_live
 能够读取指定B站直播间的弹幕，并且做出反应，实现视频点播 / Be able to read the barrage in the designated live broadcasting room of station B and respond to it to realize video on demand
 
+## **最重要的基础设置 / The most important basic setting**
+打开main.bat文件，找到如下字符（有两段相同字符） / Open the main.bat file and find the following characters (there are two identical characters)
+
+    D:\anaconda\python.exe
+
+**将其修改为你的python程序的路径 / Change it to the path of your Python program**
+
 ## **实现效果 / Effect achieved**
  1. 当观众发送普通弹幕，print发送人id和弹幕内容 / When the audience sends ordinary danmaku, print sender ID and danmaku content
  2. 当观众发送“播放 avxxxxx”或“播放 BVxxxxx”时（注意av和BV的大小写和“点播后的空格”），存储到order_list.json中 / When the audience sends "播放 avxxxxx" or "播放 BVxxxxx" (note the capitalization of av and BV and the space after "播放"), it is stored in order_list.json
@@ -22,12 +29,7 @@
  - os
 
   
-## **最重要的基础设置 / The most important basic setting**
-打开main.bat文件，找到如下字符（有两段相同字符） / Open the main.bat file and find the following characters (there are two identical characters)
 
-    D:\anaconda\python.exe
-
-**将其修改为你的python程序的路径 / Change it to the path of your Python program**
 
 ## **修改直播间和默认列表 / Modify the live room id and default list**
 ### 修改直播间 / Modify the live room id
