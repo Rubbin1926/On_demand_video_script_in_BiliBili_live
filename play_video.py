@@ -122,11 +122,6 @@ async def main():
                 url = f"""https://www.bilibili.com/video/{v1}"""
                 open_and_close_browser(url, v_time+6, True)
 
-                # 播放完毕删除视频
-                # del video_list[0]
-                # with open('order_list.json', 'w') as f:
-                #     json.dump(video_list, f)
-
             if v1.startswith("BV"):
 
                 # 获取视频信息（时长）
@@ -138,10 +133,5 @@ async def main():
                 # 打开网页播放视频
                 url = f"""https://www.bilibili.com/video/{v1}"""
                 open_and_close_browser(url, v_time+6, True)
-
-                # 播放完毕删除视频
-                # del video_list[0]
-                # with open('order_list.json', 'w') as f:
-                #     json.dump(video_list, f)
 
 asyncio.run(main())
