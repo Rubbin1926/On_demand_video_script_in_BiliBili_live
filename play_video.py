@@ -18,10 +18,7 @@ def if_switch_video():
     with open('switch_video.json', 'r') as f:
         is_switch = json.load(f)
 
-    if is_switch == [1]:
-        return True
-    else:
-        return False
+    return is_switch == [1]
 
 
 def any_video_in_list():
